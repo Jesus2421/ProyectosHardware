@@ -1,0 +1,65 @@
+# encoding: utf-8
+# 2023 R1
+SetScriptVersion(Version="23.1.153")
+template1 = GetTemplate(
+    TemplateName="Static Structural",
+    Solver="ANSYS")
+system1 = template1.CreateSystem()
+system2 = template1.CreateSystem(
+    Position="Below",
+    RelativeTo=system1)
+favorites1 = EngData.LoadFavoriteItems()
+library1 = EngData.OpenLibrary(
+    Name="General Materials",
+    Source="General_Materials.xml")
+engineeringData1 = system1.GetContainer(ComponentName="Engineering Data")
+matl1 = engineeringData1.ImportMaterial(
+    Name="Aluminum Alloy",
+    Source="General_Materials.xml")
+matl2 = engineeringData1.ImportMaterial(
+    Name="Polyethylene",
+    Source="General_Materials.xml")
+EngData.EnableFilter(Enable=False)
+material1 = engineeringData1.GetMaterial(Name="Structural Steel")
+material1.Delete()
+geometry1 = system1.GetContainer(ComponentName="Geometry")
+geometry1.SetFile(FilePath=GetAbsoluteUserPathName("CAD DE TFM definitivo/Simulacion/botonera.STEP"))
+geometry2 = system2.GetContainer(ComponentName="Geometry")
+geometry2.Edit(IsDiscoveryGeometry=True)
+engineeringData2 = system2.GetContainer(ComponentName="Engineering Data")
+matl3 = engineeringData2.ImportMaterial(
+    Name="Aluminum Alloy",
+    Source="General_Materials.xml")
+matl4 = engineeringData2.ImportMaterial(
+    Name="Polyethylene",
+    Source="General_Materials.xml")
+matl2.SetColor(
+    Red=0,
+    Green=0,
+    Blue=0)
+material2 = engineeringData2.GetMaterial(Name="Structural Steel")
+material2.Delete()
+matl4.SetColor(
+    Red=0,
+    Green=0,
+    Blue=0)
+matl3.SetColor(
+    Red=189,
+    Green=181,
+    Blue=191)
+matl1.SetColor(
+    Red=193,
+    Green=200,
+    Blue=204)
+geometry2.SetFile(FilePath=GetAbsoluteUserPathName("CAD DE TFM definitivo/Simulacion/botonera.STEP"))
+modelComponent1 = system1.GetComponent(Name="Model")
+modelComponent1.Refresh()
+model1 = system1.GetContainer(ComponentName="Model")
+model1.Edit()
+model1.Exit()
+modelComponent2 = system2.GetComponent(Name="Model")
+modelComponent2.Refresh()
+model2 = system2.GetContainer(ComponentName="Model")
+model2.Edit()
+model2.Exit()
+Save(Overwrite=True)

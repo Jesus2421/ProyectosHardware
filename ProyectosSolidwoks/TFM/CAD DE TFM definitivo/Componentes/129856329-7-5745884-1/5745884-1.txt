@@ -1,0 +1,12 @@
+﻿"Symbol";"Value";"Unit";
+"TraceParts.PartNumber";"10-23072019-128529";"";
+"REFERENCE";"5745884-1";"";
+"rs_stock_number";"1642341";"";
+"TraceParts.PartTitle";"Conector D-sub de crimpado TE Connectivity 5745884-1, Serie HDP-20, 50 contactos, Recta, Hembra, 250 V ac";"";
+"SUPPLIER_NAME";"RS Components";"";
+"Buy_Now";"https://uk.rs-online.com/web/p/products/1642341?cm_mmc=en-ds-_-mcad-_-traceparts-_-1642341'";"";
+"SUPPLIER";"TE Connectivity";"";
+"DESIGN";"Conector D-sub de crimpado TE Connectivity 5745884-1, Serie HDP-20, 50 contactos, Recta, Hembra, 250 V ac";"";
+"TraceParts.InstanceId";"10-23072019-12852988BEVKGFLZJ64FED5A9VAW0UF";"";
+"TraceParts.PartVersion";"1.0.5";"";
+"TraceParts.PartLanguage";"es";"";

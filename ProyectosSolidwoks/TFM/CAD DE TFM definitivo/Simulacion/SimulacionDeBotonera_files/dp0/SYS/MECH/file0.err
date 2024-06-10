@@ -1,0 +1,10 @@
+/COM,ANSYS RELEASE 2023 R1           BUILD 23.1      UP20221128       21:25:33
+
+ *** WARNING ***                         CP =       1.938   TIME= 21:25:34
+ Element shape checking is currently inactive.  Issue SHPP,ON or         
+ SHPP,WARN to reactivate, if desired.                                    
+
+ *** WARNING ***                         CP =       2.234   TIME= 21:25:34
+ Material number 76 (used by element 90054) should normally have at      
+ least one MP or one TB type command associated with it.  Output of      
+ energy by material may not be available.                                
